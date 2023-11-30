@@ -27,10 +27,6 @@ export default class Airport {
     this._code = value;
   }
 
-  valueOf() {
-    return `Airport [${this._code}] { _name: ${this._name}, _code: ${this._code} }`;
-  }
-
   get [Symbol.toStringTag]() {
     return this._code;
   }
