@@ -1,4 +1,4 @@
-const weakMap = new WeakMap();
+export const weakMap = new WeakMap();
 
 export function queryAPI(endpoint) {
   const bool = weakMap.has(endpoint);
@@ -13,5 +13,3 @@ export function queryAPI(endpoint) {
     }
   }
 }
-
-export { weakMap };
