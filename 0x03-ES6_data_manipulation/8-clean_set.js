@@ -1,5 +1,5 @@
 export default function cleanSet(set, startString) {
-  if (startString === '') return '';
+  if (startString === '' || !set) return '';
   const stringArray = [];
   const index = startString.length;
 
