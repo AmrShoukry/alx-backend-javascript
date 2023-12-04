@@ -6,10 +6,9 @@ export function queryAPI(endpoint) {
     weakMap.set(endpoint, 1);
   } else {
     const times = weakMap.get(endpoint);
-    if (times >= 5) {
+    weakMap.set(endpoint, times + 1);
+    if (times + 1 >= 5) {
       throw new Error('Endpoint load is high');
-    } else {
-      weakMap.set(endpoint, times + 1);
     }
   }
 }
