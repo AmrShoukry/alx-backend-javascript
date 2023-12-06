@@ -3,8 +3,8 @@ namespace Subjects {
     experienceTeachingC?: number;
   }
 
-  class Cpp extends Subject {
-    constructor(teacher: Teacher) {
+  export class Cpp extends Subject {
+    constructor(teacher: Teacher = null) {
       super(teacher);
     }
     getRequirements(): string {

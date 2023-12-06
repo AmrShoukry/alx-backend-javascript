@@ -3,8 +3,8 @@ namespace Subjects {
     experienceTeachingJava?: number;
   }
 
-  class Java extends Subject {
-    constructor(teacher: Teacher) {
+  export class Java extends Subject {
+    constructor(teacher: Teacher = null) {
       super(teacher);
     }
     getRequirements(): string {

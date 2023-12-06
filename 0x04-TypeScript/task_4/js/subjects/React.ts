@@ -3,8 +3,8 @@ namespace Subjects {
     experienceTeachingReact?: number;
   }
 
-  class React extends Subject {
-    constructor(teacher: Teacher) {
+  export class React extends Subject {
+    constructor(teacher: Teacher = null) {
       super(teacher);
     }
 
