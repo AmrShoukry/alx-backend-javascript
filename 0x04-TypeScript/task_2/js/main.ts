@@ -64,5 +64,13 @@ function executeWork(employee: any): void {
     : console.log(employee.workTeacherTasks());
 }
 
-executeWork(createEmployee(200));
-executeWork(createEmployee(1000));
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects): void {
+  todayClass === "Math"
+    ? console.log("Teaching Math")
+    : console.log("Teaching History");
+}
+
+teachClass("Math");
+teachClass("History");
