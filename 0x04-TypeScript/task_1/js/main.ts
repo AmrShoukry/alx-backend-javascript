@@ -11,14 +11,6 @@ interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-const teacher3: Teacher = {
-  firstName: "John",
-  fullTimeEmployee: false,
-  lastName: "Doe",
-  location: "London",
-  contract: false,
-};
-
 interface printTeacherFunction {
   firstName: string;
   lastName: string;
@@ -28,13 +20,23 @@ function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0].toUpperCase()}. ${lastName}`;
 }
 
-console.log(teacher3);
+interface studentInterface {
+  firstName: string;
+  lastName: string;
+}
 
-const director1: Directors = {
-  firstName: "John",
-  lastName: "Doe",
-  location: "London",
-  fullTimeEmployee: true,
-  numberOfReports: 17,
-};
-console.log(director1);
+interface studentClassInterface {
+  new (firstName: string, lastName: string): StudentClass;
+}
+
+class StudentClass implements studentInterface {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
