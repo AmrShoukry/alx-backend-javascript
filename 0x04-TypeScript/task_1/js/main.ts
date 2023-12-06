@@ -19,6 +19,15 @@ const teacher3: Teacher = {
   contract: false,
 };
 
+interface printTeacherFunction {
+  firstName: string;
+  lastName: string;
+}
+
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0].toUpperCase()}. ${lastName}`;
+}
+
 console.log(teacher3);
 
 const director1: Directors = {
