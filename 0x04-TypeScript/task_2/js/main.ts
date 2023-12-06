@@ -53,3 +53,16 @@ function createEmployee(salary: number | string): Director | Teacher {
   if (typeof salary === "number" && salary < 500) return new Teacher();
   return new Director();
 }
+
+function isDirector(employee: any): boolean {
+  return employee instanceof Director;
+}
+
+function executeWork(employee: any): void {
+  return isDirector(employee)
+    ? console.log(employee.workDirectorTasks())
+    : console.log(employee.workTeacherTasks());
+}
+
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
